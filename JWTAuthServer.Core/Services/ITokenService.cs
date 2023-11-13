@@ -1,4 +1,5 @@
-﻿using JWTAuthServer.Core.DTOs;
+﻿using JWTAuthServer.Core.Configuration;
+using JWTAuthServer.Core.DTOs;
 using JWTAuthServer.Core.Models;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,6 @@ namespace JWTAuthServer.Core.Services
     public interface ITokenService
     {
         TokenDto CreateToken(UserApp userApp);
-        ClientTokenDto CreatetokenByClient(ClientTokenDto client);
+        ClientTokenDto CreatetokenByClient(Client client);
     }
 }

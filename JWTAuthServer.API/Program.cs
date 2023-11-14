@@ -10,7 +10,7 @@ using JWTAuthServer.Service.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using SharedLibrary.CustomTokenOption;
+using SharedLibrary.Configurations;
 using System;
 
 var builder = WebApplication.CreateBuilder(args);

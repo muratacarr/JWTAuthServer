@@ -5,7 +5,7 @@ using JWTAuthServer.Core.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using SharedLibrary.CustomTokenOption;
+using SharedLibrary.Configurations;
 using System;
 using System.Collections.Generic;
 using System.Globalization;

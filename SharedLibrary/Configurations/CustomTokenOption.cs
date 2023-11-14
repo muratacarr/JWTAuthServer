@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SharedLibrary.CustomTokenOption
+namespace SharedLibrary.Configurations
 {
     public class CustomTokenOption
     {

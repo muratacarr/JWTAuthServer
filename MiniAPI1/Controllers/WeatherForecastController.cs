@@ -31,5 +31,14 @@ namespace MiniAPI1.Controllers
             })
             .ToArray();
         }
+        [HttpPost("upload")]
+        public async Task<IActionResult> UploadFile(IFormFile formFile)
+        {
+            var newName = Guid.NewGuid() + Path.GetExtension(formFile.FileName);
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", newName);
+            var stream = new FileStream(path, FileMode.Create);
+            await formFile.CopyToAsync(stream);
+            return Created(string.Empty, formFile);
+        }
     }
 }

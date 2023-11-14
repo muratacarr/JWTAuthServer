@@ -33,8 +33,8 @@ namespace JWTAuthServer.Service.Services
 
         public TokenDto CreateToken(UserApp userApp)
         {
-            var accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.AccessTokenExpriration);
-            var refreshTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.RefreshTokenExpriration);
+            var accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.AccessTokenExpiration);
+            var refreshTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.RefreshTokenExpiration);
             var securityKey = SignService.GetSymmetricSecurityKey(_tokenOption.SecurityKey);
 
             SigningCredentials signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
@@ -63,7 +63,7 @@ namespace JWTAuthServer.Service.Services
 
         public ClientTokenDto CreatetokenByClient(Client client)
         {
-            var accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.AccessTokenExpriration);
+            var accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.AccessTokenExpiration);
             
             var securityKey = SignService.GetSymmetricSecurityKey(_tokenOption.SecurityKey);
 
